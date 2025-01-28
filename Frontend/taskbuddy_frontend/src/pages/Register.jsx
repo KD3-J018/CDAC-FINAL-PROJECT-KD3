@@ -2,11 +2,11 @@ import React from "react";
 
 const Register = () => {
   return (
-    <div>
+    <div className="bg-body-secondary">
       <form>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
-        First Name
+            First Name
           </label>
           <input
             type="text"

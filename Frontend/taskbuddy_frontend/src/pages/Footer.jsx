@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-dark text-light py-4">
-      <div className="container">
+      <div className="mx-3">
         <div className="row">
           {/* TaskBuddy Info */}
           <div className="col-md-3 mb-3">

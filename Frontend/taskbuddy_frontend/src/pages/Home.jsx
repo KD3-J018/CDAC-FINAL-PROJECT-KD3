@@ -10,19 +10,14 @@ import { FaStar } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa";
 import { FaRupeeSign } from "react-icons/fa";
 import Footer from "./Footer";
-import { CgProfile } from "react-icons/cg";
-import TaskerProfile from "./TaskerProfile";
-import TaskerList from "./TaskerList";
-import TaskerRegistration from "./TaskerRegistration";
-import CustomerRegistration from "./CustomerRegistration";
 
 const Home = () => {
   return (
-    <div className="mt-3">
-      <div className="border-bottom">
+    <div className="bg-body-secondary ">
+      <div className="border-bottom ">
         <Navbar />
       </div>
-      <div className="d-flex justify-content-between mt-5 ">
+      <div className="d-flex justify-content-between mt-5  ">
         <h2 className="mx-auto">Home Services At Your DoorStep</h2>
       </div>
       <div>

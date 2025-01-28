@@ -118,7 +118,7 @@ const TaskerList = () => {
   ];
 
   return (
-    <div>
+    <div className="bg-body-secondary">
       <Navbar />
 
       <div className="container my-5 ">

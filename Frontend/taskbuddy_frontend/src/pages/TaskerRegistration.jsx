@@ -22,7 +22,7 @@ const TaskerRegistration = () => {
   };
 
   return (
-    <div className="container my-5 w-50">
+    <div className="container my-5 w-50 ">
       <h2 className="text-center mb-4">Tasker Registration</h2>
       <form onSubmit={handleSubmit} className="card p-4 shadow">
         <div className="mb-3">

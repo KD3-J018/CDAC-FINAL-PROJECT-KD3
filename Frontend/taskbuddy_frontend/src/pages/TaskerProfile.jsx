@@ -26,7 +26,7 @@ const TaskerProfile = () => {
   };
 
   return (
-    <div>
+    <div className="bg-body-secondary">
       <Navbar />
       <div className="container my-5">
         <div className="card">
