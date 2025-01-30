@@ -40,15 +40,7 @@ const Navbar = () => {
                   Home
                 </a>
               </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  onClick={() => navigate("/taskers")}
-                  href="#"
-                >
-                  Taskers
-                </a>
-              </li>
+
               <li className="nav-item dropdown">
                 <a
                   className="nav-link active dropdown-toggle"
@@ -61,28 +53,41 @@ const Navbar = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <a href="/services/sofa" className="dropdown-item">
                       Sofa Cleaning
                     </a>
                   </li>
                   <hr className="dropdown-divider" />
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Packers & Movers
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Paste Control
+                    <a className="dropdown-item" href="/services/cleaning">
+                      Intense cleaning
                     </a>
                   </li>
                   <hr className="dropdown-divider" />
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Laundry
+                    <a className="dropdown-item" href="/services/bathroom">
+                      Bathroom Cleaning
+                    </a>
+                  </li>
+                  <hr className="dropdown-divider" />
+                  <li>
+                    <a className="dropdown-item" href="/services/haircut">
+                      Men Haircutting
+                    </a>
+                  </li>
+
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="/services/door">
+                      Door Lock Repairing
+                    </a>
+                  </li>
+                  <hr className="dropdown-divider" />
+                  <li>
+                    <a className="dropdown-item" href="/services/geyser">
+                      Geyser Service
                     </a>
                   </li>
                 </ul>

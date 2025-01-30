@@ -27,10 +27,15 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a href="" onClick={() => navigate("/taskerPanel")}>
+                  Tasker Panel
+                </a>
+              </li>
+              <li>
                 <a href="/services" className="text-light text-decoration-none">
                   Our Services
                 </a>
-              </li>
+              </li>{" "}
               <li>
                 <a
                   href=""
@@ -55,34 +60,52 @@ const Footer = () => {
             <ul className="list-unstyled">
               <li>
                 <a
+                  href="/services/door"
+                  className="text-light text-decoration-none"
+                >
+                  Door Lock Repairing
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/services/geyser"
+                  className="text-light text-decoration-none"
+                >
+                  Geyser Service
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/services/bathroom"
+                  className="text-light text-decoration-none"
+                >
+                  Bathroom Cleaning
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/services/haircut"
+                  className="text-light text-decoration-none"
+                >
+                  Men Haircutting
+                </a>
+              </li>
+
+              <li>
+                <a
                   href="/services/cleaning"
                   className="text-light text-decoration-none"
                 >
-                  Cleaning
+                  Intense Cleaning
                 </a>
               </li>
+
               <li>
                 <a
-                  href="/services/moving"
+                  href="/services/sofa"
                   className="text-light text-decoration-none"
                 >
-                  Packers & Movers
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/plumbing"
-                  className="text-light text-decoration-none"
-                >
-                  Plumbing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services/electrical"
-                  className="text-light text-decoration-none"
-                >
-                  Electrical Repairs
+                  Sofa Cleaning
                 </a>
               </li>
             </ul>

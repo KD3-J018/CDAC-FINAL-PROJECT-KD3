@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar";
 
-const AdminPanel = () => {
+const TaskerPanel = () => {
   const navigate = useNavigate();
 
   return (
@@ -10,87 +10,57 @@ const AdminPanel = () => {
       <div>
         <Navbar></Navbar>
       </div>
-      <h1 className="mb-4 text-center  mt-5"> Admin Panel</h1>
+      <h1 className="mb-4 text-center mt-5">Tasker Panel</h1>
 
       <div className="container">
-        {/* Admin Dashboard Overview */}
+        {/* Tasker Dashboard Overview */}
         <div className="row mb-4">
           <div className="col-md-3">
             <div className="card text-center bg-info text-light">
               <div className="card-body">
-                <h5 className="card-title">Total Users</h5>
-                <p className="card-text fs-4">1,245</p>
+                <h5 className="card-title">Total Tasks Completed</h5>
+                <p className="card-text fs-4">15</p>
               </div>
             </div>
           </div>
           <div className="col-md-3">
             <div className="card text-center bg-success text-light">
               <div className="card-body">
-                <h5 className="card-title">Total Taskers</h5>
-                <p className="card-text fs-4">345</p>
+                <h5 className="card-title">Pending Request</h5>
+                <p className="card-text fs-4">3</p>
               </div>
             </div>
           </div>
           <div className="col-md-3">
             <div className="card text-center bg-warning text-dark">
               <div className="card-body">
-                <h5 className="card-title">Active Tasks</h5>
-                <p className="card-text fs-4">78</p>
+                <h5 className="card-title">Pending Tasks</h5>
+                <p className="card-text fs-4">2</p>
               </div>
             </div>
           </div>
           <div className="col-md-3">
             <div className="card text-center bg-danger text-light">
               <div className="card-body">
-                <h5 className="card-title">Pending Payments</h5>
-                <p className="card-text fs-4">$12,435</p>
+                <h5 className="card-title">Per Month Earnings</h5>
+                <p className="card-text fs-4">₹12,000</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* User Management Section */}
+        {/* My Tasks Section */}
         <div className="card mb-4">
           <div className="card-header bg-dark text-light">
-            <h5>User Management</h5>
+            <h5>My Tasks</h5>
           </div>
           <div className="card-body">
-            <p>View and manage registered users and taskers:</p>
+            <p>Manage your assigned tasks:</p>
             <ul>
               <li>
                 <a
                   href=""
-                  onClick={() => navigate("/admin/viewCutomer")}
-                  className="text-decoration-none text-primary"
-                >
-                  View Customers
-                </a>
-              </li>
-              <li>
-                <a
-                  href=""
-                  onClick={() => navigate("/admin/takserListHori")}
-                  className="text-decoration-none text-primary"
-                >
-                  View Taskers
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Task Management Section */}
-        <div className="card mb-4">
-          <div className="card-header bg-dark text-light">
-            <h5>Task Management</h5>
-          </div>
-          <div className="card-body">
-            <p>Manage ongoing and completed tasks:</p>
-            <ul>
-              <li>
-                <a
-                  href=""
-                  onClick={() => navigate("/admin/taskersList")}
+                  onClick={() => navigate("/tasker/activeTasks")}
                   className="text-decoration-none text-primary"
                 >
                   View Active Tasks
@@ -99,7 +69,7 @@ const AdminPanel = () => {
               <li>
                 <a
                   href=""
-                  onClick={() => navigate("/admin/completedTask")}
+                  onClick={() => navigate("/tasker/completedTasks")}
                   className="text-decoration-none text-primary"
                 >
                   View Completed Tasks
@@ -108,10 +78,49 @@ const AdminPanel = () => {
               <li>
                 <a
                   href=""
-                  onClick={() => navigate("/admin/categoryForm")}
+                  onClick={() => navigate("/tasker/updateTaskStatus")}
                   className="text-decoration-none text-primary"
                 >
-                  Add Cataegory
+                  Update Task Status
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Profile Management Section */}
+        <div className="card mb-4">
+          <div className="card-header bg-dark text-light">
+            <h5>Profile Management</h5>
+          </div>
+          <div className="card-body">
+            <p>Manage your profile and update personal information:</p>
+            <ul>
+              <li>
+                <a
+                  href=""
+                  onClick={() => navigate("/tasker/editProfile")}
+                  className="text-decoration-none text-primary"
+                >
+                  Edit Profile
+                </a>
+              </li>
+              <li>
+                <a
+                  href=""
+                  onClick={() => navigate("/tasker/viewRatings")}
+                  className="text-decoration-none text-primary"
+                >
+                  View Ratings and Reviews
+                </a>
+              </li>
+              <li>
+                <a
+                  href=""
+                  onClick={() => navigate("/tasker/updateAvailability")}
+                  className="text-decoration-none text-primary"
+                >
+                  Update Availability
                 </a>
               </li>
             </ul>
@@ -124,50 +133,54 @@ const AdminPanel = () => {
             <h5>Payment Management</h5>
           </div>
           <div className="card-body">
-            <p>Manage payments and track transactions:</p>
+            <p>Track your earnings and manage payment details:</p>
             <ul>
               <li>
                 <a
-                  href="/admin/pending-payments"
+                  href=""
+                  onClick={() => navigate("/tasker/paymentHistory")}
                   className="text-decoration-none text-primary"
                 >
-                  View Pending Payments
+                  View Payment History
                 </a>
               </li>
               <li>
                 <a
-                  href="/admin/transactions"
+                  href=""
+                  onClick={() => navigate("/tasker/updatePaymentMethod")}
                   className="text-decoration-none text-primary"
                 >
-                  View All Transactions
+                  Update Payment Method
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Feedback & Analytics Section */}
+        {/* Support Section */}
         <div className="card mb-4">
           <div className="card-header bg-dark text-light">
-            <h5>Feedback & Analytics</h5>
+            <h5>Support</h5>
           </div>
           <div className="card-body">
-            <p>Monitor user feedback and site analytics:</p>
+            <p>Need help or have questions? Contact support:</p>
             <ul>
               <li>
                 <a
-                  href="/admin/feedback"
+                  href=""
+                  onClick={() => navigate("/tasker/support")}
                   className="text-decoration-none text-primary"
                 >
-                  View User Feedback
+                  Contact Support
                 </a>
               </li>
               <li>
                 <a
-                  href="/admin/analytics"
+                  href=""
+                  onClick={() => navigate("/tasker/faqs")}
                   className="text-decoration-none text-primary"
                 >
-                  View Site Analytics
+                  View FAQs
                 </a>
               </li>
             </ul>
@@ -178,4 +191,4 @@ const AdminPanel = () => {
   );
 };
 
-export default AdminPanel;
+export default TaskerPanel;
