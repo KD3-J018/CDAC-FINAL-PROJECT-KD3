@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../Images/TaskbudyLogo.png";
 import { CgProfile } from "react-icons/cg";
 import { Navigate, useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ onSearch, placeholderText }) => {
   const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+    if (onSearch) onSearch(e.target.value); // Call the search function if provided
+  };
 
   return (
     <div>
@@ -106,10 +112,16 @@ const Navbar = () => {
               <input
                 className="form-control me-2"
                 type="search"
-                placeholder="Search Service"
+                value={searchTerm}
+                onChange={handleSearch}
+                placeholder={placeholderText} // Use dynamic placeholder
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button
+                className="btn btn-outline-success"
+                type="button"
+                onClick={() => onSearch(searchTerm)}
+              >
                 Search
               </button>
             </form>

@@ -4,11 +4,8 @@
 
 // const TaskerList = () => {
 //   const navigate = useNavigate();
+//   const { service } = useParams(); // Get service from URL
 
-//   // Get the service parameter from the URL
-//   const { service } = useParams(); // Added for showing taskers for a particular service selected in footer
-
-//   // Example taskers data
 //   const taskers = [
 //     {
 //       id: 1,
@@ -120,23 +117,30 @@
 //     },
 //   ];
 
-//   // Filter taskers based on the service parameter
-//   const filteredTaskers = taskers.filter(
-//     (tasker) => tasker.category.toLowerCase().includes(service.toLowerCase()) // Ensure the category matches the service param
-//   );
-
-//   // const filteredTaskers = taskers.filter(tasker =>
-//   //   tasker.category.toLowerCase() === service.toLowerCase() // Ensure exact match between category and service
+//   // const filteredTaskers = taskers.filter((tasker) =>
+//   //   service
+//   //     ? tasker.category.toLowerCase().includes(service.toLowerCase())
+//   //     : true // Show all taskers if no service provided
 //   // );
+
+//   const filteredTaskers = taskers.filter((tasker) =>
+//     tasker.category
+//       .toLowerCase()
+//       .replace(/\s+/g, "")
+//       .includes(service.toLowerCase().replace(/\s+/g, ""))
+//   );
 
 //   return (
 //     <div>
 //       <Navbar />
-
 //       <div className="container my-5">
 //         <h2 className="text-center mb-4">Tasker List</h2>
 //         <div className="row">
-//           {filteredTaskers.length > 0 ? (
+//           {service && filteredTaskers.length === 0 ? (
+//             <div className="col-12">
+//               <p>No taskers available for this service.</p>
+//             </div>
+//           ) : (
 //             filteredTaskers.map((tasker) => (
 //               <div className="col-md-6 col-lg-4 mb-4" key={tasker.id}>
 //                 <div className="card h-100">
@@ -164,7 +168,7 @@
 //                       </p>
 //                       <button
 //                         className="btn btn-primary btn-sm"
-//                         onClick={() => navigate("/taskerProfile")}
+//                         onClick={() => navigate(`/taskerProfile/${tasker.id}`)}
 //                       >
 //                         View Profile
 //                       </button>
@@ -173,10 +177,6 @@
 //                 </div>
 //               </div>
 //             ))
-//           ) : (
-//             <div className="col-12">
-//               <p>No taskers available for this service.</p>
-//             </div>
 //           )}
 //         </div>
 //       </div>
@@ -186,20 +186,21 @@
 
 // export default TaskerList;
 
-// taskerlist
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const TaskerList = () => {
   const navigate = useNavigate();
   const { service } = useParams(); // Get service from URL
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredTaskers, setFilteredTaskers] = useState([]);
+  const [placeholderText, setPlaceholderText] = useState("Search Task"); // Default placeholder text
 
   const taskers = [
     {
       id: 1,
       name: "John Doe",
-      profileImage: "https://via.placeholder.com/100",
       category: "Door Lock Repairing",
       location: "New York, NY",
       hourlyRate: "150/hr",
@@ -208,7 +209,6 @@ const TaskerList = () => {
     {
       id: 2,
       name: "Jane Smith",
-      profileImage: "https://via.placeholder.com/100",
       category: "Geyser Service",
       location: "Los Angeles, CA",
       hourlyRate: "200/hr",
@@ -217,7 +217,6 @@ const TaskerList = () => {
     {
       id: 3,
       name: "Tom Brown",
-      profileImage: "https://via.placeholder.com/100",
       category: "Bathroom Cleaning",
       location: "Chicago, IL",
       hourlyRate: "599/hr",
@@ -226,7 +225,6 @@ const TaskerList = () => {
     {
       id: 4,
       name: "Lucy Green",
-      profileImage: "https://via.placeholder.com/100",
       category: "Sofa Cleaning",
       location: "Houston, TX",
       hourlyRate: "399/hr",
@@ -235,7 +233,6 @@ const TaskerList = () => {
     {
       id: 5,
       name: "Mike Johnson",
-      profileImage: "https://via.placeholder.com/100",
       category: "Intense Cleaning",
       location: "Phoenix, AZ",
       hourlyRate: "299/hr",
@@ -244,8 +241,7 @@ const TaskerList = () => {
     {
       id: 6,
       name: "Sophia Lee",
-      profileImage: "https://via.placeholder.com/100",
-      category: "  Men Haircutting",
+      category: "Men Haircutting",
       location: "Philadelphia, PA",
       hourlyRate: "999/hr",
       rating: 4.9,
@@ -253,7 +249,6 @@ const TaskerList = () => {
     {
       id: 7,
       name: "Chris Wilson",
-      profileImage: "https://via.placeholder.com/100",
       category: "Sofa Cleaning",
       location: "San Antonio, TX",
       hourlyRate: "899/hr",
@@ -262,7 +257,6 @@ const TaskerList = () => {
     {
       id: 8,
       name: "Emily Davis",
-      profileImage: "https://via.placeholder.com/100",
       category: "Intense Cleaning",
       location: "San Diego, CA",
       hourlyRate: "299/hr",
@@ -271,7 +265,6 @@ const TaskerList = () => {
     {
       id: 9,
       name: "Daniel Moore",
-      profileImage: "https://via.placeholder.com/100",
       category: "Door Lock Repairing",
       location: "Dallas, TX",
       hourlyRate: "399/hr",
@@ -280,7 +273,6 @@ const TaskerList = () => {
     {
       id: 10,
       name: "Olivia Martinez",
-      profileImage: "https://via.placeholder.com/100",
       category: "Geyser Service",
       location: "San Jose, CA",
       hourlyRate: "199/hr",
@@ -289,7 +281,6 @@ const TaskerList = () => {
     {
       id: 11,
       name: "Daniel Moore",
-      profileImage: "https://via.placeholder.com/100",
       category: "Bathroom Cleaning",
       location: "Dallas, TX",
       hourlyRate: "399/hr",
@@ -298,7 +289,6 @@ const TaskerList = () => {
     {
       id: 12,
       name: "Olivia Martinez",
-      profileImage: "https://via.placeholder.com/100",
       category: "Sofa Cleaning",
       location: "San Jose, CA",
       hourlyRate: "199/hr",
@@ -306,26 +296,37 @@ const TaskerList = () => {
     },
   ];
 
-  // const filteredTaskers = taskers.filter((tasker) =>
-  //   service
-  //     ? tasker.category.toLowerCase().includes(service.toLowerCase())
-  //     : true // Show all taskers if no service provided
-  // );
+  useEffect(() => {
+    const filtered = taskers.filter((tasker) =>
+      tasker.category.toLowerCase().includes(service.toLowerCase())
+    );
+    setFilteredTaskers(filtered);
 
-  const filteredTaskers = taskers.filter((tasker) =>
-    tasker.category
-      .toLowerCase()
-      .replace(/\s+/g, "")
-      .includes(service.toLowerCase().replace(/\s+/g, ""))
-  );
+    // Change placeholder text when a specific task is selected
+    if (service) {
+      setPlaceholderText("Search Tasker");
+    } else {
+      setPlaceholderText("Search Task");
+    }
+  }, [service]);
+
+  const handleSearch = (searchTerm) => {
+    setSearchTerm(searchTerm);
+    const filtered = taskers.filter(
+      (tasker) =>
+        tasker.category.toLowerCase().includes(service.toLowerCase()) &&
+        tasker.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredTaskers(filtered);
+  };
 
   return (
     <div>
-      <Navbar />
+      <Navbar onSearch={handleSearch} placeholderText={placeholderText} />
       <div className="container my-5">
-        <h2 className="text-center mb-4">Tasker List</h2>
+        <h2 className="text-center mb-4">Tasker List for {service}</h2>
         <div className="row">
-          {service && filteredTaskers.length === 0 ? (
+          {filteredTaskers.length === 0 ? (
             <div className="col-12">
               <p>No taskers available for this service.</p>
             </div>
@@ -336,7 +337,7 @@ const TaskerList = () => {
                   <div className="card-body d-flex align-items-center">
                     <div className="me-3">
                       <img
-                        src={tasker.profileImage}
+                        src="https://via.placeholder.com/100"
                         alt={`${tasker.name} Profile`}
                         className="rounded-circle"
                         width="60"

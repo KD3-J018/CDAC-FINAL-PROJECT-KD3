@@ -75,15 +75,6 @@ const TaskerPanel = () => {
                   View Completed Tasks
                 </a>
               </li>
-              <li>
-                <a
-                  href=""
-                  onClick={() => navigate("/tasker/updateTaskStatus")}
-                  className="text-decoration-none text-primary"
-                >
-                  Update Task Status
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -114,15 +105,6 @@ const TaskerPanel = () => {
                   View Ratings and Reviews
                 </a>
               </li>
-              <li>
-                <a
-                  href=""
-                  onClick={() => navigate("/tasker/updateAvailability")}
-                  className="text-decoration-none text-primary"
-                >
-                  Update Availability
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -142,15 +124,6 @@ const TaskerPanel = () => {
                   className="text-decoration-none text-primary"
                 >
                   View Payment History
-                </a>
-              </li>
-              <li>
-                <a
-                  href=""
-                  onClick={() => navigate("/tasker/updatePaymentMethod")}
-                  className="text-decoration-none text-primary"
-                >
-                  Update Payment Method
                 </a>
               </li>
             </ul>

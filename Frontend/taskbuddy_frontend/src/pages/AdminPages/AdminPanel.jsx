@@ -162,14 +162,6 @@ const AdminPanel = () => {
                   View User Feedback
                 </a>
               </li>
-              <li>
-                <a
-                  href="/admin/analytics"
-                  className="text-decoration-none text-primary"
-                >
-                  View Site Analytics
-                </a>
-              </li>
             </ul>
           </div>
         </div>
