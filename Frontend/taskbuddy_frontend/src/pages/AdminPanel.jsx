@@ -1,5 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import CustomerList from './CustomerList'; 
+import { Link } from 'react-router-dom';
+import TaskerList3 from "./TaskerList3";
+
 
 const AdminPanel = () => {
   const navigate = useNavigate();
@@ -53,21 +57,42 @@ const AdminPanel = () => {
           <p>View and manage registered users and taskers:</p>
           <ul>
             <li>
+            {/* <Link
+                to="/admin/customers"
+                className="text-decoration-none text-primary"
+              >
+                View Customers
+              </Link> */}
               <a
-                href="/admin/customers"
+                href=""
+                onClick={() => navigate("/admin/customers")}
                 className="text-decoration-none text-primary"
               >
                 View Customers
               </a>
+
+
+
             </li>
             <li>
-              <a
+              {/* <a
                 href=""
                 onClick={() => navigate("/taskers")}
                 className="text-decoration-none text-primary"
               >
                 View Taskers
+              </a> */}
+
+              <a
+                href=""
+                onClick={() => navigate("/admin/taskers")}
+                className="text-decoration-none text-primary"
+              >
+                View Taskers
               </a>
+
+
+
             </li>
             <li>
               <a
