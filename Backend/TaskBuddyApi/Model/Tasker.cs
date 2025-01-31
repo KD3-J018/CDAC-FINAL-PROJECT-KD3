@@ -1,4 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace TaskBuddyApi.Model
@@ -6,15 +11,17 @@ namespace TaskBuddyApi.Model
     public class Tasker
     {
 
+       
 
-            [Key] // Indicates that 'Id' is the primary key
-            public int Id { get; set; }
 
-            [Required] // Marks 'Name' as a required field
+            [Key]
+            public int TaskerId { get; set; }
+
+            [Required]
             public string Name { get; set; }
 
             [Required]
-            [EmailAddress] // Validates the email format
+            [EmailAddress]
             public string Email { get; set; }
 
             [Required]
@@ -22,10 +29,22 @@ namespace TaskBuddyApi.Model
 
             public string Phone { get; set; }
             public string Address { get; set; }
-            public string Category { get; set; }
+
+            // Foreign key for TaskCategory
+            public int TaskCategoryId { get; set; }
+            [ForeignKey("TaskCategoryId")]
+            public TaskCategory TaskCategory { get; set; }
+
             public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+            public DateTime? UpdatedAt { get; set; } = DateTime.UtcNow;
+            public bool IsDeleted { get; set; } = false;
+
+            public ICollection<ServiceTask> Tasks { get; set; }
         }
     }
+
+
+    
 
 
 

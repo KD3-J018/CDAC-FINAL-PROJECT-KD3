@@ -1,23 +1,28 @@
 [
   {
-    "ContainingType": "TaskBuddyApi.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
+    "ContainingType": "TaskBuddyApi.Controllers.AdminController",
+    "Method": "GetAllAdmins",
+    "RelativePath": "api/admins",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskBuddyApi.Controllers.CustomerController",
+    "Method": "RegisterCustomer",
+    "RelativePath": "api/customer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[TaskBuddyApi.WeatherForecast, TaskBuddyApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "customer",
+        "Type": "TaskBuddyApi.Model.Customer",
+        "IsRequired": true
       }
     ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": []
   }
 ]
