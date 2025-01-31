@@ -13,6 +13,12 @@ import CustomerList from "./pages/AdminPages/CustomerList";
 import TaskerListHorizontal from "./pages/AdminPages/TaskerListHorizontal";
 import TaskerPanel from "./pages/TaskerPages/TaskerPanel";
 import ActiveTasks from "./pages/TaskerPages/ActiveTasks";
+import TaskerRegistration from "./pages/TaskerPages/TaskerRegistration" ; 
+import TaskerEditProfile from "./pages/TaskerPages/TaskerEditProfile" ; 
+import TaskerViewRating from "./pages/TaskerPages/TaskerViewRating" ; 
+import TaskerPaymentHistory from "./pages/TaskerPages/TaskerPaymentHistory" ; 
+import CustomerPanel from "./pages/CustomerPages/CustomerPanel" ; 
+import CustomerEditProfile from "./pages/CustomerPages/CustomerEditProfile" ; 
 
 function App() {
   return (
@@ -46,6 +52,12 @@ function App() {
           element={<CompletedTasks />}
         ></Route>
         <Route path="/taskers/:service" element={<TaskerList />} />
+        <Route path="/tasker/Registration" element={<TaskerRegistration />}></Route>
+        <Route path="/tasker/editProfile" element={<TaskerEditProfile />}></Route>
+        <Route path="/tasker/viewRatings" element={<TaskerViewRating/>}></Route>
+        <Route path="/tasker/paymentHistory" element={<TaskerPaymentHistory/>}></Route>
+        <Route path="/Customer/CustomerPanel" element={<CustomerPanel/>} ></Route>
+        <Route path="/Customer/CustomerEditProfile" element={<CustomerEditProfile/>}></Route>
       </Routes>
     </div>
   );
