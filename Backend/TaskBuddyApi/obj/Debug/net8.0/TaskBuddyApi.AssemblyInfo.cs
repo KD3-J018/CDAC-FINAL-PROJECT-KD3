@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TaskBuddyApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86074361e935d7c3d9cc75dff4fe49acc2296b7c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3bd66e1c218deaea5531a1c15c2b309f40c1a19a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TaskBuddyApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TaskBuddyApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

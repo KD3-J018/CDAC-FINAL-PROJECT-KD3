@@ -5222,23 +5222,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Abhay\\.nuget\\packages\\": {},
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Abhay\\Desktop\\Project\\Date30\\Date31\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\TaskBuddyApi.csproj",
+      "projectUniqueName": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\TaskBuddyApi.csproj",
       "projectName": "TaskBuddyApi",
-      "projectPath": "C:\\Users\\Abhay\\Desktop\\Project\\Date30\\Date31\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\TaskBuddyApi.csproj",
-      "packagesPath": "C:\\Users\\Abhay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Abhay\\Desktop\\Project\\Date30\\Date31\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\obj\\",
+      "projectPath": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\TaskBuddyApi.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Abhay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
