@@ -125,38 +125,84 @@ namespace TaskBuddyApi.Controllers
         //    return CreatedAtAction(nameof(GetTaskerById), new { id = tasker.TaskerId }, tasker);
         //}
 
+        //[HttpPost]
+        //public async Task<IActionResult> CreateTasker([FromBody] Tasker tasker)
+        //{
+        //    if (!ModelState.IsValid)
+        //        return BadRequest(ModelState);
+
+        //    // Check if the email is already registered
+        //    var existingTasker = await _context.Taskers.FirstOrDefaultAsync(t => t.Email == tasker.Email);
+        //    if (existingTasker != null)
+        //    {
+        //        return Conflict(new { message = "Tasker with this email already exists." });
+        //    }
+
+        //    // Validate TaskCategoryId
+        //    var category = await _context.TaskCategories.FindAsync(tasker.TaskCategoryId);
+        //    if (category == null)
+        //    {
+        //        return BadRequest(new { message = "Invalid TaskCategoryId." });
+        //    }
+
+        //    // Hash the password using BCrypt.Net
+        //    tasker.PasswordHash = BCrypt.Net.BCrypt.HashPassword(tasker.PasswordHash);
+
+        //    // Attach TaskCategory and set other properties
+        //    tasker.TaskCategory = category;
+
+        //    // Add Tasker to the database
+        //    _context.Taskers.Add(tasker);
+        //    await _context.SaveChangesAsync();
+
+        //    return CreatedAtAction(nameof(GetTaskerById), new { id = tasker.TaskerId }, tasker);
+        //}
+
         [HttpPost]
         public async Task<IActionResult> CreateTasker([FromBody] Tasker tasker)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            // Check if the email is already registered
-            var existingTasker = await _context.Taskers.FirstOrDefaultAsync(t => t.Email == tasker.Email);
-            if (existingTasker != null)
             {
-                return Conflict(new { message = "Tasker with this email already exists." });
+                return BadRequest(ModelState); // Return validation errors
             }
 
-            // Validate TaskCategoryId
+            // 1. Email Exists Check (Important!)
+            if (await _context.Taskers.AnyAsync(t => t.Email == tasker.Email))
+            {
+                return Conflict(new { message = "Tasker with this email already exists." }); // 409 Conflict
+            }
+
+            // 2. TaskCategoryId Validation (Important!)
             var category = await _context.TaskCategories.FindAsync(tasker.TaskCategoryId);
             if (category == null)
             {
-                return BadRequest(new { message = "Invalid TaskCategoryId." });
+                return BadRequest(new { message = "Invalid TaskCategoryId." }); // 400 Bad Request
             }
 
-            // Hash the password using BCrypt.Net
+            // 3. Password Hashing (Essential!)
             tasker.PasswordHash = BCrypt.Net.BCrypt.HashPassword(tasker.PasswordHash);
 
-            // Attach TaskCategory and set other properties
-            tasker.TaskCategory = category;
+            // 4. Set other properties if needed (CreatedAt is already set in the model)
+            tasker.TaskCategory = category; // Set the navigation property
 
-            // Add Tasker to the database
+            // 5. Add and Save
             _context.Taskers.Add(tasker);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetTaskerById), new { id = tasker.TaskerId }, tasker);
+            // 6. Return CreatedAtAction (Best Practice)
+            //return CreatedAtAction(nameof(GetTaskerById), new { id = tasker.TaskerId }, tasker);
+            return Ok("registration successfull");
+
+            // Alternative if you *don't* have a GetTaskerById action and don't want a Location header:
+            // return Created(tasker); // 201 Created with the created object
+            // return Ok(tasker); // 200 OK with the created object.
+
         }
+
+        
+
+
+
 
         // READ All Taskers
         [HttpGet]

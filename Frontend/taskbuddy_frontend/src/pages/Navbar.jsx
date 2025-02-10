@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../Images/TaskbudyLogo.png";
 import { CgProfile } from "react-icons/cg";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ onSearch, placeholderText }) => {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ const Navbar = ({ onSearch, placeholderText }) => {
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
-    if (onSearch) onSearch(e.target.value); // Call the search function if provided
+    if (onSearch) onSearch(e.target.value);
   };
 
   return (
@@ -35,8 +35,8 @@ const Navbar = ({ onSearch, placeholderText }) => {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 fs-5  mb-lg-0">
-              <li className="nav-item  ">
+            <ul className="navbar-nav me-auto mb-2 fs-5 mb-lg-0">
+              <li className="nav-item ">
                 <a
                   className="nav-link active "
                   aria-current="page"
@@ -46,7 +46,6 @@ const Navbar = ({ onSearch, placeholderText }) => {
                   Home
                 </a>
               </li>
-
               <li className="nav-item dropdown">
                 <a
                   className="nav-link active dropdown-toggle"
@@ -81,7 +80,6 @@ const Navbar = ({ onSearch, placeholderText }) => {
                       Men Haircutting
                     </a>
                   </li>
-
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
@@ -98,14 +96,36 @@ const Navbar = ({ onSearch, placeholderText }) => {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item">
+              <li className="nav-item dropdown">
                 <a
-                  className="nav-link active"
-                  onClick={() => navigate("/CustomerRegister")}
+                  className="nav-link active dropdown-toggle"
                   href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
                   Login/Register
                 </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      onClick={() => navigate("/CustomerLogin")}
+                      href="#"
+                    >
+                      Login as Customer
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      onClick={() => navigate("/tasker/login")}
+                      href="#"
+                    >
+                      Login as Tasker
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
             <form className="d-flex" role="search">
@@ -114,7 +134,7 @@ const Navbar = ({ onSearch, placeholderText }) => {
                 type="search"
                 value={searchTerm}
                 onChange={handleSearch}
-                placeholder={placeholderText} // Use dynamic placeholder
+                placeholder={placeholderText}
                 aria-label="Search"
               />
               <button

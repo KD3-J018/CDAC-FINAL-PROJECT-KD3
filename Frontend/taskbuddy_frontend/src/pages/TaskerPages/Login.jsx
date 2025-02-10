@@ -67,9 +67,15 @@ const Login = () => {
                             required
                         />
                     </div>
+                    <br />
                     <button type="submit" className="btn btn-primary w-100">Login</button>
+
                 </form>
+                <br></br>
+                <a href="/tasker/Registration" className="my-link">Register New User</a>
             </div>
+
+            
         </div>
     );
 };
