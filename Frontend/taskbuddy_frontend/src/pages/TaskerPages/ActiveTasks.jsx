@@ -1,24 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar";
+import { jwtDecode } from 'jwt-decode'; // Correct import
+import { useNavigate } from "react-router-dom";
 
 const ActiveTasks = () => {
-  // Sample active tasks data (replace with API data or props)
-  const activeTasks = [
-    {
-      id: 1,
-      name: "Plumbing Repair",
-      customer: "John Doe",
-      address: "123 Main St, Springfield",
-      status: "In Progress",
-      startDate: "2025-01-25",
-    },
-  ];
+  const [activeTasks, setActiveTasks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const navigate = useNavigate();
+
+  const fetchActiveTasks = async () => {
+    try {
+      debugger ; 
+const token = localStorage.getItem("token");
+      if (!token) {
+        navigate("/tasker/login"); // Redirect if no token
+        return;
+      }
+
+      // Decode the token to get taskerId
+      const decoded = jwtDecode(token);
+      const taskerId = decoded.TaskerId;
+      const response = await fetch(`http://localhost:5286/api/Tasker/${taskerId}/active-tasks`);
+      if (!response.ok) {
+        throw new Error("Failed to fetch tasks");
+      }
+      const data = await response.json();
+      setActiveTasks(data.$values);
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchActiveTasks();
+  }, []);
 
   return (
-    <div className=" ">
-      <div className="">
-        <Navbar></Navbar>
-      </div>
+    <div>
+      <Navbar />
       <div className="container mt-4">
         <h2 className="text-center mb-4">Active Tasks</h2>
         <div className="card">
@@ -26,17 +49,21 @@ const ActiveTasks = () => {
             <h5>Task List</h5>
           </div>
           <div className="card-body">
-            {activeTasks.length > 0 ? (
+            {loading ? (
+              <p>Loading...</p>
+            ) : error ? (
+              <p className="text-danger">Error: {error}</p>
+            ) : activeTasks.length > 0 ? (
               <ul className="list-group">
                 {activeTasks.map((task) => (
                   <li
-                    key={task.id}
+                    key={task.taskId}
                     className="list-group-item d-flex justify-content-between align-items-center"
                   >
                     <div>
-                      <h5>{task.name}</h5>
+                      <h5>{task.taskTitle}</h5>
                       <p className="mb-1">
-                        <strong>Customer:</strong> {task.customer}
+                        <strong>Customer:</strong> {task.customerName}
                       </p>
                       <p className="mb-1">
                         <strong>Address:</strong> {task.address}

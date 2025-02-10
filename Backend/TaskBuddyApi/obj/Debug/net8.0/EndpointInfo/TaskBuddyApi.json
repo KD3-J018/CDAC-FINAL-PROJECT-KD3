@@ -152,6 +152,37 @@
         }
       }
     },
+    "/api/Tasker/Login": {
+      "post": {
+        "tags": [
+          "Tasker"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Tasker": {
       "post": {
         "tags": [
@@ -319,6 +350,75 @@
           }
         }
       }
+    },
+    "/api/Tasker/stats/{taskerId}": {
+      "get": {
+        "tags": [
+          "Tasker"
+        ],
+        "parameters": [
+          {
+            "name": "taskerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Tasker/{taskerId}/active-tasks": {
+      "get": {
+        "tags": [
+          "Tasker"
+        ],
+        "parameters": [
+          {
+            "name": "taskerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Tasker/{taskerId}/completed-tasks": {
+      "get": {
+        "tags": [
+          "Tasker"
+        ],
+        "parameters": [
+          {
+            "name": "taskerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -386,6 +486,32 @@
             "nullable": true
           },
           "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginRequest": {
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "twoFactorCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "twoFactorRecoveryCode": {
             "type": "string",
             "nullable": true
           }

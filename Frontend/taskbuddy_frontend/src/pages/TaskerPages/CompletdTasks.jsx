@@ -1,36 +1,54 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+// import Navbar from "../Navbar";
+import { jwtDecode } from 'jwt-decode'; // Correct import
+import { useNavigate } from "react-router-dom";
+
 
 const CompletedTasks = () => {
-  // Example task data
-  const tasks = [
-    {
-      id: 1,
-      name: "Plumbing Repair",
-      customer: "John Doe",
-      address: "123 Main St, Springfield",
-      status: "Completed",
-      completionDate: "2025-01-20",
-    },
-    {
-      id: 2,
-      name: "House Cleaning",
-      customer: "Jane Smith",
-      address: "45 Elm St, Springfield",
-      status: "Completed",
-      completionDate: "2025-01-22",
-    },
-    {
-      id: 3,
-      name: "Electrical Repair",
-      customer: "Mike Johnson",
-      address: "78 Maple Ave, Springfield",
-      status: "Active",
-      completionDate: null,
-    },
-  ];
+  const [completedTasks, setCompletedTasks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Filter only completed tasks
-  const completedTasks = tasks.filter((task) => task.status === "Completed");
+  const navigate = useNavigate();
+
+  const fetchCompletedTasks = async () => {
+    try {
+      debugger;
+      const token = localStorage.getItem("token");
+      if (!token) {
+        navigate("/tasker/login"); // Redirect if no token
+        return;
+      }
+
+      // Decode the token to get taskerIdss
+      const decoded = jwtDecode(token);
+      const taskerId = decoded.TaskerId;
+
+      const response = await fetch(`http://localhost:5286/api/Tasker/${taskerId}/completed-tasks`);
+      if (!response.ok) {
+        throw new Error("Failed to fetch tasks");
+      }
+
+      const data = await response.json();
+      setCompletedTasks(data.$values); // Assuming $values contains the array of tasks
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchCompletedTasks();
+  }, []);
+
+  if (loading) {
+    return <div className="text-center mt-4">Loading completed tasks...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center text-danger mt-4">{error}</div>;
+  }
 
   return (
     <div className="container mt-4">
@@ -43,12 +61,12 @@ const CompletedTasks = () => {
           {completedTasks.length > 0 ? (
             <ul className="list-group list-group-flush">
               {completedTasks.map((task) => (
-                <li key={task.id} className="list-group-item">
+                <li key={task.taskId} className="list-group-item">
                   <div className="d-flex justify-content-between">
                     <div>
-                      <h5>{task.name}</h5>
+                      <h5>{task.taskTitle}</h5>
                       <p className="mb-1">
-                        <strong>Customer:</strong> {task.customer}
+                        <strong>Customer:</strong> {task.customerName}
                       </p>
                       <p className="mb-1">
                         <strong>Address:</strong> {task.address}

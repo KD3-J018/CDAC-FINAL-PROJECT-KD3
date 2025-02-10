@@ -1,104 +1,56 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\",
+  "WorkspaceRootPath": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\model\\tasker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:model\\tasker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\model\\servicetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:model\\servicetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/task_buddy_DB/True/SqlTable/dbo.Taskers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250209052134_changesinTaskerTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250209052134_changesinTaskerTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\controllers\\taskerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\prathamesh\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\controllers\\taskerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:controllers\\taskerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\migrations\\20250130180329_updatemigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:migrations\\20250130180329_updatemigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/task_buddy_DB/True/SqlTable/dbo.ServiceTasks.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\model\\transactionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:model\\transactionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/task_buddy_DB/True/SqlTable/dbo.Customer.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\model\\taskcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:model\\taskcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\prathamesh\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\model\\servicetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:model\\servicetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\model\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:model\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dell\\AppData\\Local\\Temp\\1umnyj5e..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\model\\notifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:model\\notifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\model\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\prathamesh\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\model\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:model\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\model\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:model\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/task_buddy_DB/True/SqlTable/dbo.Taskers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\prathamesh\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\model\\tasker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:model\\tasker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Cdac_project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130144445_intialMainMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\prathamesh\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\model\\transactionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:model\\transactionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Cdac_project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130143944_newMainMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Cdac_project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130142729_mainMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Cdac_project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130141305_mainMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Cdac_project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130140850_mainIntialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\prathamesh\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\prathamesh\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\model\\taskcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:model\\taskcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\migrations\\20250130145713_transactionmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:migrations\\20250130145713_transactionmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\prathamesh\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\migrations\\20250130145600_reviewmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:migrations\\20250130145600_reviewmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dell\\AppData\\Local\\Temp\\1umnyj5e..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\migrations\\20250130145317_notificationmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:migrations\\20250130145317_notificationmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\migrations\\20250130145018_adminmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:migrations\\20250130145018_adminmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|e:\\cdac\\project\\cdac-final-project-kd3\\backend\\taskbuddyapi\\migrations\\20250130144621_taskermigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E36F7CA-E9B6-439F-A178-74C7F8AEA8E5}|TaskBuddyApi.csproj|solutionrelative:migrations\\20250130144621_taskermigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dell\\AppData\\Local\\Temp\\1umnyj5e..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -108,313 +60,152 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "dbo.Taskers [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/task_buddy_DB/True/SqlTable/dbo.Taskers.sql",
-              "ToolTip": "dbo.Taskers [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-02-09T05:22:44.488Z",
+              "Title": "ServiceTask.cs",
+              "DocumentMoniker": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\ServiceTask.cs",
+              "RelativeDocumentMoniker": "Model\\ServiceTask.cs",
+              "ToolTip": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\ServiceTask.cs",
+              "RelativeToolTip": "Model\\ServiceTask.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAA9wC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T13:58:28.987Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20250209052134_changesinTaskerTable.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250209052134_changesinTaskerTable.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250209052134_changesinTaskerTable.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250209052134_changesinTaskerTable.cs",
-              "RelativeToolTip": "Migrations\\20250209052134_changesinTaskerTable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T05:21:34.546Z",
+              "DocumentIndex": 1,
+              "Title": "dbo.ServiceTasks [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/task_buddy_DB/True/SqlTable/dbo.ServiceTasks.sql",
+              "ToolTip": "dbo.ServiceTasks [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-10T09:20:49.316Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "TaskersController.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Controllers\\TaskersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TaskersController.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Controllers\\TaskersController.cs",
-              "RelativeToolTip": "Controllers\\TaskersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Title": "Customer.cs",
+              "DocumentMoniker": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\Customer.cs",
+              "RelativeDocumentMoniker": "Model\\Customer.cs",
+              "ToolTip": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\Customer.cs",
+              "RelativeToolTip": "Model\\Customer.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T05:15:29.914Z",
+              "WhenOpened": "2025-02-10T09:19:48.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbo.Customer [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/task_buddy_DB/True/SqlTable/dbo.Customer.sql",
+              "ToolTip": "dbo.Customer [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-10T08:34:44.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SQLQuery3.sql ",
+              "DocumentMoniker": "C:\\Users\\Dell\\AppData\\Local\\Temp\\1umnyj5e..sql",
+              "ToolTip": "SQLQuery3.sql *",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-10T08:32:44.783Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TaskersController.cs",
+              "DocumentMoniker": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Controllers\\TaskersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TaskersController.cs",
+              "ToolTip": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Controllers\\TaskersController.cs",
+              "RelativeToolTip": "Controllers\\TaskersController.cs",
+              "ViewState": "AgIAAD4BAAAAAAAAAAAAAFABAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T08:27:53.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "dbo.Taskers [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/task_buddy_DB/True/SqlTable/dbo.Taskers.sql",
+              "ToolTip": "dbo.Taskers [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-10T08:26:14.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Tasker.cs",
+              "DocumentMoniker": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\Tasker.cs",
+              "RelativeDocumentMoniker": "Model\\Tasker.cs",
+              "ToolTip": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\Tasker.cs",
+              "RelativeToolTip": "Model\\Tasker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T06:00:18.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TransactionHistory.cs",
+              "DocumentMoniker": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\TransactionHistory.cs",
+              "RelativeDocumentMoniker": "Model\\TransactionHistory.cs",
+              "ToolTip": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\TransactionHistory.cs",
+              "RelativeToolTip": "Model\\TransactionHistory.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAkwBwAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T14:04:07.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Program.cs",
+              "DocumentMoniker": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Program.cs",
+              "ToolTip": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADkAAAAAODMzMzPjvxUAAABWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-30T07:42:24.549Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Tasker.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\Tasker.cs",
-              "RelativeDocumentMoniker": "Model\\Tasker.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\Tasker.cs",
-              "RelativeToolTip": "Model\\Tasker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T09:08:31.19Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20250130180329_updateMigration.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130180329_updateMigration.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250130180329_updateMigration.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130180329_updateMigration.cs",
-              "RelativeToolTip": "Migrations\\20250130180329_updateMigration.cs",
-              "ViewState": "AgIAAAAAAADw//////8lwAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T18:03:29.893Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Review.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\Review.cs",
-              "RelativeDocumentMoniker": "Model\\Review.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\Review.cs",
-              "RelativeToolTip": "Model\\Review.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAcwBkAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:06:21.533Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ServiceTask.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\ServiceTask.cs",
-              "RelativeDocumentMoniker": "Model\\ServiceTask.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\ServiceTask.cs",
-              "RelativeToolTip": "Model\\ServiceTask.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T13:58:28.987Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-30T08:59:18.284Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "Notifications.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\Notifications.cs",
-              "RelativeDocumentMoniker": "Model\\Notifications.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\Notifications.cs",
-              "RelativeToolTip": "Model\\Notifications.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAxwBUAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:05:11.487Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\Customer.cs",
-              "RelativeDocumentMoniker": "Model\\Customer.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\Customer.cs",
-              "RelativeToolTip": "Model\\Customer.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAxwCEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T13:56:40.112Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "TaskCategory.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\TaskCategory.cs",
+              "DocumentMoniker": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\TaskCategory.cs",
               "RelativeDocumentMoniker": "Model\\TaskCategory.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\TaskCategory.cs",
+              "ToolTip": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\TaskCategory.cs",
               "RelativeToolTip": "Model\\TaskCategory.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowBMAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:00:27.953Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TransactionHistory.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\TransactionHistory.cs",
-              "RelativeDocumentMoniker": "Model\\TransactionHistory.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\TransactionHistory.cs",
-              "RelativeToolTip": "Model\\TransactionHistory.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBwAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:04:07.083Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\Admin.cs",
-              "RelativeDocumentMoniker": "Model\\Admin.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Model\\Admin.cs",
-              "RelativeToolTip": "Model\\Admin.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowBYAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:07:04.269Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "20250130145713_transactionMigration.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130145713_transactionMigration.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250130145713_transactionMigration.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130145713_transactionMigration.cs",
-              "RelativeToolTip": "Migrations\\20250130145713_transactionMigration.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:57:13.955Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "20250130145600_reviewMigration.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130145600_reviewMigration.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250130145600_reviewMigration.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130145600_reviewMigration.cs",
-              "RelativeToolTip": "Migrations\\20250130145600_reviewMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:56:00.931Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "20250130145317_notificationMigration.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130145317_notificationMigration.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250130145317_notificationMigration.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130145317_notificationMigration.cs",
-              "RelativeToolTip": "Migrations\\20250130145317_notificationMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:53:17.265Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ApplicationDBContext.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Data\\ApplicationDBContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDBContext.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Data\\ApplicationDBContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDBContext.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBEAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T09:51:16.826Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "20250130145018_AdminMigration.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130145018_AdminMigration.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250130145018_AdminMigration.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130145018_AdminMigration.cs",
-              "RelativeToolTip": "Migrations\\20250130145018_AdminMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:50:19.061Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "20250130144621_TaskerMigration.cs",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130144621_TaskerMigration.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250130144621_TaskerMigration.cs",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130144621_TaskerMigration.cs",
-              "RelativeToolTip": "Migrations\\20250130144621_TaskerMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:46:21.95Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "20250130144445_intialMainMigration.cs",
-              "DocumentMoniker": "C:\\Cdac_project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130144445_intialMainMigration.cs",
-              "ToolTip": "C:\\Cdac_project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130144445_intialMainMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:44:45.321Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "20250130143944_newMainMigration.cs",
-              "DocumentMoniker": "C:\\Cdac_project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130143944_newMainMigration.cs",
-              "ToolTip": "C:\\Cdac_project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130143944_newMainMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:39:44.544Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "20250130142729_mainMigration.cs",
-              "DocumentMoniker": "C:\\Cdac_project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130142729_mainMigration.cs",
-              "ToolTip": "C:\\Cdac_project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130142729_mainMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:27:29.247Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "20250130141305_mainMigration.cs",
-              "DocumentMoniker": "C:\\Cdac_project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130141305_mainMigration.cs",
-              "ToolTip": "C:\\Cdac_project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130141305_mainMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:13:05.22Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "20250130140850_mainIntialMigration.cs",
-              "DocumentMoniker": "C:\\Cdac_project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130140850_mainIntialMigration.cs",
-              "ToolTip": "C:\\Cdac_project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Migrations\\20250130140850_mainIntialMigration.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:08:50.435Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-30T08:59:18.284Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "E:\\cdac\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-30T07:42:37.936Z"
+              "WhenOpened": "2025-01-30T14:00:27.953Z",
+              "EditorCaption": ""
             }
           ]
         }

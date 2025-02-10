@@ -1,11 +1,79 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar";
+// import { jwt_decode } from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode'; // Correct import
+import React, { useEffect, useState } from "react";
 
 const TaskerPanel = () => {
   const navigate = useNavigate();
 
-  return (
+/////////////////////////////////////////////////////////////
+
+
+// State to hold tasker data
+const [taskerStats, setTaskerStats] = useState({
+  completedTasks: 0,
+  pendingRequests: 0,
+  pendingTasks: 0,
+  earnings: 0,
+});
+
+// Fetch tasker-specific data
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      debugger ; 
+      // Get JWT token from localStorage
+      const token = localStorage.getItem("token");
+      if (!token) {
+        navigate("/tasker/login"); // Redirect if no token
+        return;
+      }
+
+      // Decode the token to get taskerId
+      const decoded = jwtDecode(token);
+      const taskerId = decoded.TaskerId;
+
+      // API call to fetch stats for the tasker
+      const response = await fetch(
+        `http://localhost:5286/api/tasker/stats/${taskerId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch tasker stats.");
+      }
+
+      const data = await response.json();
+      setTaskerStats({
+        completedTasks: data.totalTasksCompleted,
+        pendingRequests: data.pendingRequests,
+        pendingTasks: data.pendingTasks,
+        earnings: data.earningsPerMonth,
+      });
+    } catch (error) {
+      console.error("Error fetching tasker data:", error);
+      navigate("/tasker/login"); // Redirect to login on error
+    }
+  };
+
+  fetchData();
+}, [navigate]);
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+ 
+
+return (
     <div className="">
       <div>
         <Navbar></Navbar>
@@ -19,7 +87,7 @@ const TaskerPanel = () => {
             <div className="card text-center bg-info text-light">
               <div className="card-body">
                 <h5 className="card-title">Total Tasks Completed</h5>
-                <p className="card-text fs-4">15</p>
+                <p className="card-text fs-4">{taskerStats.completedTasks}</p>
               </div>
             </div>
           </div>
@@ -27,7 +95,7 @@ const TaskerPanel = () => {
             <div className="card text-center bg-success text-light">
               <div className="card-body">
                 <h5 className="card-title">Pending Request</h5>
-                <p className="card-text fs-4">3</p>
+                <p className="card-text fs-4">{taskerStats.pendingRequests}</p>
               </div>
             </div>
           </div>
@@ -35,7 +103,7 @@ const TaskerPanel = () => {
             <div className="card text-center bg-warning text-dark">
               <div className="card-body">
                 <h5 className="card-title">Pending Tasks</h5>
-                <p className="card-text fs-4">2</p>
+                <p className="card-text fs-4">{taskerStats.pendingTasks}</p>
               </div>
             </div>
           </div>
@@ -43,7 +111,7 @@ const TaskerPanel = () => {
             <div className="card text-center bg-danger text-light">
               <div className="card-body">
                 <h5 className="card-title">Per Month Earnings</h5>
-                <p className="card-text fs-4">₹12,000</p>
+                <p className="card-text fs-4">₹{taskerStats.earnings}</p>
               </div>
             </div>
           </div>

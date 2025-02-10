@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace TaskBuddyApi.Model
 {
@@ -15,6 +16,7 @@ namespace TaskBuddyApi.Model
 
         [Required]
         [EmailAddress]
+       
         public string Email { get; set; }
 
         [Required]
@@ -47,6 +49,6 @@ namespace TaskBuddyApi.Model
         [ForeignKey("TaskCategoryId")]
         public TaskCategory? TaskCategory { get; set; } // Made Nullable
 
-        //public ICollection<ServiceTask>? Tasks { get; set; } // Made Nullable
+        public ICollection<ServiceTask>? Tasks { get; set; } // Made Nullable
     }
 }

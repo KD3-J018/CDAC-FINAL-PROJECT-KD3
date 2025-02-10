@@ -19,6 +19,8 @@ import TaskerViewRating from "./pages/TaskerPages/TaskerViewRating" ;
 import TaskerPaymentHistory from "./pages/TaskerPages/TaskerPaymentHistory" ; 
 import CustomerPanel from "./pages/CustomerPages/CustomerPanel" ; 
 import CustomerEditProfile from "./pages/CustomerPages/CustomerEditProfile" ; 
+import TaskerLogin from "./pages/TaskerPages/Login" ; 
+import TaskerCompletedTasks from "./pages/TaskerPages/CompletdTasks" ; 
 
 function App() {
   return (
@@ -47,10 +49,7 @@ function App() {
         <Route path="/services/:service" element={<TaskerList />} />
         <Route path="/taskerPanel" element={<TaskerPanel />}></Route>
         <Route path="/tasker/activeTasks" element={<ActiveTasks />}></Route>
-        <Route
-          path="/tasker/completedTasks"
-          element={<CompletedTasks />}
-        ></Route>
+        <Route path="/tasker/completedTasks" element={<TaskerCompletedTasks />} ></Route>
         <Route path="/taskers/:service" element={<TaskerList />} />
         <Route path="/tasker/Registration" element={<TaskerRegistration />}></Route>
         <Route path="/tasker/editProfile" element={<TaskerEditProfile />}></Route>
@@ -58,6 +57,7 @@ function App() {
         <Route path="/tasker/paymentHistory" element={<TaskerPaymentHistory/>}></Route>
         <Route path="/Customer/CustomerPanel" element={<CustomerPanel/>} ></Route>
         <Route path="/Customer/CustomerEditProfile" element={<CustomerEditProfile/>}></Route>
+        <Route path="/tasker/login" element={<TaskerLogin/>}></Route>
       </Routes>
     </div>
   );
