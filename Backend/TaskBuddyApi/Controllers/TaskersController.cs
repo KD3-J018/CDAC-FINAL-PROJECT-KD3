@@ -169,12 +169,12 @@ namespace TaskBuddyApi.Controllers
         }
 
         // READ Tasker by ID
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Tasker>> GetTaskerById(int id)
+        [HttpGet("{taskerId}/profile")]
+        public async Task<ActionResult<Tasker>> GetTaskerById(int taskerId)
         {
             var tasker = await _context.Taskers
                 .Include(t => t.TaskCategory)
-                .FirstOrDefaultAsync(t => t.TaskerId == id && !t.IsDeleted);
+                .FirstOrDefaultAsync(t => t.TaskerId == taskerId && !t.IsDeleted);
 
             if (tasker == null)
                 return NotFound("Tasker not found.");
@@ -343,7 +343,161 @@ namespace TaskBuddyApi.Controllers
         }
 
 
+        ///////////////////////////////////review and rating //////////////////////////
+        ///
 
+        [HttpGet("{taskerId}/reviews")]
+        public async Task<IActionResult> GetReviewsForTasker(int taskerId, int page = 1, int pageSize = 10)
+        {
+            // Validate if the Tasker exists
+            var taskerExists = _context.Taskers.Any(t => t.TaskerId == taskerId);
+            if (!taskerExists)
+            {
+                return NotFound(new { Message = "Tasker not found." });
+            }
+
+            // Fetch reviews for the tasker
+            var reviews = await _context.Reviews
+                .Where(r => r.TaskerId == taskerId && !r.IsDeleted)
+                .Include(r => r.Customer) // Include Customer for Name field
+                .OrderByDescending(r => r.CreatedAt)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .Select(r => new
+                {
+                    r.ReviewId,
+                    r.Rating,
+                    r.Comments,
+                    CustomerName = r.Customer.Name, // Assuming Customer has a Name property
+                    r.CreatedAt
+                })
+                .ToListAsync();
+
+            return Ok(new
+            {
+                TotalReviews = _context.Reviews.Count(r => r.TaskerId == taskerId && !r.IsDeleted),
+                CurrentPage = page,
+                PageSize = pageSize,
+                Reviews = reviews
+            });
+        }
+
+        //////////////////////////////// payment history////////////////////////////////
+        ///
+        //[HttpGet("{taskerId}/payment")]
+        //public async Task<IActionResult> GetTransactionHistory(int taskerId, [FromQuery] int page = 1, [FromQuery] int pageSize = 10)
+        //{
+        //    try
+        //    {
+        //        var transactions = await _context.TransactionHistory
+        //            .Where(t => t.TaskerId == taskerId && !t.IsDeleted) // Filter by TaskerId and exclude deleted transactions
+        //            .Include(t => t.Customer) // Include Customer details
+        //            .OrderByDescending(t => t.CreatedAt) // Order by the latest transactions
+        //            .Skip((page - 1) * pageSize) // Pagination
+        //            .Take(pageSize)
+        //            .ToListAsync();
+
+        //        var totalRecords = await _context.TransactionHistory
+        //            .CountAsync(t => t.TaskerId == taskerId && !t.IsDeleted);
+
+        //        return Ok(new
+        //        {
+        //            TotalRecords = totalRecords,
+        //            CurrentPage = page,
+        //            PageSize = pageSize,
+        //            Transactions = transactions.Select(t => new
+        //            {
+        //                t.TransactionId,
+        //                t.CustomerId,
+        //                CustomerName = t.Customer.Name,
+        //                t.Amount,
+        //                Status = t.Status.ToString(),
+        //                CreatedAt = t.CreatedAt,
+        //                UpdatedAt = t.UpdatedAt
+        //            })
+        //        });
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, new { Message = "An error occurred while retrieving transaction history.", Error = ex.Message });
+        //    }
+        //}
+
+
+
+
+
+
+        [HttpGet("{taskerId}/payment")]
+        public async Task<IActionResult> GetTransactionHistory(
+    int taskerId,
+    [FromQuery] int page = 1,
+    [FromQuery] int pageSize = 10,
+    [FromQuery] string filterRange = "all-time")
+        {
+            try
+            {
+                var query = _context.TransactionHistory
+                    .Where(t => t.TaskerId == taskerId && !t.IsDeleted) // Filter by TaskerId and exclude deleted transactions
+                    .Include(t => t.Customer) // Include Customer details
+                    .OrderByDescending(t => t.CreatedAt) // Order by the latest transactions
+                    .AsQueryable();
+
+                // Apply filter based on the filterRange parameter
+                var today = DateTime.UtcNow;
+
+                switch (filterRange.ToLower())
+                {
+                    case "this-week":
+                        var startOfWeek = today.AddDays(-(int)today.DayOfWeek); // Start of current week (Sunday)
+                        query = query.Where(t => t.CreatedAt >= startOfWeek);
+                        break;
+
+                    case "this-month":
+                        var startOfMonth = new DateTime(today.Year, today.Month, 1); // Start of current month
+                        query = query.Where(t => t.CreatedAt >= startOfMonth);
+                        break;
+
+                    case "this-year":
+                        var startOfYear = new DateTime(today.Year, 1, 1); // Start of current year
+                        query = query.Where(t => t.CreatedAt >= startOfYear);
+                        break;
+
+                    case "all-time":
+                    default:
+                        // No additional filtering for "all-time"
+                        break;
+                }
+
+                var totalRecords = await query.CountAsync();
+
+                var transactions = await query
+                    .Skip((page - 1) * pageSize) // Pagination
+                    .Take(pageSize)
+                    .ToListAsync();
+
+                return Ok(new
+                {
+                    TotalRecords = totalRecords,
+                    CurrentPage = page,
+                    PageSize = pageSize,
+                    Transactions = transactions.Select(t => new
+                    {
+                        t.TransactionId,
+                        t.CustomerId,
+                        CustomerName = t.Customer.Name,
+                        t.Amount,
+                        Status = t.Status.ToString(),
+                        CreatedAt = t.CreatedAt,
+                        UpdatedAt = t.UpdatedAt
+                    })
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "An error occurred while retrieving transaction history.", Error = ex.Message });
+            }
+        }
 
 
 

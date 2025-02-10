@@ -21,6 +21,8 @@ import CustomerPanel from "./pages/CustomerPages/CustomerPanel" ;
 import CustomerEditProfile from "./pages/CustomerPages/CustomerEditProfile" ; 
 import TaskerLogin from "./pages/TaskerPages/Login" ; 
 import TaskerCompletedTasks from "./pages/TaskerPages/CompletdTasks" ; 
+import TaskerContactUs from "./pages/TaskerPages/TaskerContactUs" ; 
+import TaskerFaq from "./pages/TaskerPages/FAQ" ; 
 
 function App() {
   return (
@@ -58,6 +60,8 @@ function App() {
         <Route path="/Customer/CustomerPanel" element={<CustomerPanel/>} ></Route>
         <Route path="/Customer/CustomerEditProfile" element={<CustomerEditProfile/>}></Route>
         <Route path="/tasker/login" element={<TaskerLogin/>}></Route>
+        <Route path="tasker/contactus" element={<TaskerContactUs/>}></Route>
+        <Route path="tasker/faqs" element={<TaskerFaq/>}></Route>
       </Routes>
     </div>
   );

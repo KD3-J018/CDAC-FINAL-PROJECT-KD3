@@ -250,14 +250,14 @@
         }
       }
     },
-    "/api/Tasker/{id}": {
+    "/api/Tasker/{taskerId}/profile": {
       "get": {
         "tags": [
           "Tasker"
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "taskerId",
             "in": "path",
             "required": true,
             "schema": {
@@ -288,7 +288,9 @@
             }
           }
         }
-      },
+      }
+    },
+    "/api/Tasker/{id}": {
       "put": {
         "tags": [
           "Tasker"
@@ -410,6 +412,96 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Tasker/{taskerId}/reviews": {
+      "get": {
+        "tags": [
+          "Tasker"
+        ],
+        "parameters": [
+          {
+            "name": "taskerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Tasker/{taskerId}/payment": {
+      "get": {
+        "tags": [
+          "Tasker"
+        ],
+        "parameters": [
+          {
+            "name": "taskerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "filterRange",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "all-time"
             }
           }
         ],

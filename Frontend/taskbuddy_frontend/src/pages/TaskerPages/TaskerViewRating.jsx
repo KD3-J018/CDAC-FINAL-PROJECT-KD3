@@ -1,64 +1,79 @@
-import React, { useState } from "react";
-// import axios from "axios";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+// import jwtDecode from "jwt-decode"; // Correct import
+import { jwtDecode } from 'jwt-decode'; // Correct import
+import { useNavigate } from "react-router-dom";
 
 const TaskerReviews = () => {
-  const [reviews, setReviews] = useState([
-    {
-      id: 1,
-      customerName: "John Doe",
-      shortReview: "Excellent service, highly recommend!",
-      fullReview: "I hired this tasker for sofa cleaning, and they did an amazing job. The sofa looks as good as new. The tasker was polite, efficient, and professional. Highly recommend them!",
-      rating: 5,
-      date: "2025-01-28",
-      expanded: false,
-    },
-    {
-      id: 2,
-      customerName: "Jane Smith",
-      shortReview: "Great work, but took longer than expected.",
-      fullReview: "The tasker was good at electrical repairs, but the job took longer than expected. They could have communicated better regarding the time frame. However, the work done was satisfactory.",
-      rating: 4,
-      date: "2025-01-22",
-      expanded: false,
-    },
-    {
-      id: 3,
-      customerName: "David Lee",
-      shortReview: "Good service, but slightly overpriced.",
-      fullReview: "The carpentry work was decent, but I feel it was a bit overpriced for the work done. The tasker was friendly and professional though. Would consider hiring again.",
-      rating: 3,
-      date: "2025-01-18",
-      expanded: false,
-    },
-  ]);
-  
+  const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // Axios call placeholder (provision for actual backend)
+  const navigate = useNavigate();
+
   const fetchReviews = async () => {
     try {
       setLoading(true);
-      // Replace the following line with the actual axios request once the backend is available
-      // const response = await axios.get("/api/reviews/taskerId"); 
-      // setReviews(response.data);
+      setError("");
 
-      // Temporarily setting hardcoded data
+      const token = localStorage.getItem("token");
+      if (!token) {
+        navigate("/tasker/login"); // Redirect if no token
+        return;
+      }
+
+      // Decode the token to get taskerId
+      const decoded = jwtDecode(token);
+      const taskerId = decoded.TaskerId;
+
+      // API call
+      const response = await axios.get(
+        `http://localhost:5286/api/Tasker/${taskerId}/reviews`,
+        {
+          params: { page: 1, pageSize: 10 }, // Optional: Pagination
+        }
+      );
+
+      // Access reviews data from the response
+      const { $values: reviewsArray } = response.data.reviews;
+
+      // Format the reviews
+      const formattedReviews = reviewsArray.map((review) => ({
+        id: review.reviewId,
+        customerName: review.customerName,
+        shortReview:
+          review.comments.length > 50
+            ? `${review.comments.substring(0, 50)}...`
+            : review.comments,
+        fullReview: review.comments,
+        rating: review.rating,
+        date: new Date(review.createdAt).toLocaleDateString(), // Ensure createdAt exists in response
+        expanded: false,
+      }));
+
+      setReviews(formattedReviews);
       setLoading(false);
     } catch (err) {
-      setError("Error fetching reviews");
+      console.error("Error fetching reviews:", err);
+      setError("Failed to load reviews. Please try again later.");
       setLoading(false);
     }
   };
 
   const toggleReviewExpansion = (id) => {
-    setReviews(reviews.map((review) =>
-      review.id === id ? { ...review, expanded: !review.expanded } : review
-    ));
+    setReviews(
+      reviews.map((review) =>
+        review.id === id ? { ...review, expanded: !review.expanded } : review
+      )
+    );
   };
 
+  useEffect(() => {
+    fetchReviews();
+  }, []);
+
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>Loading reviews...</div>;
   }
 
   if (error) {
