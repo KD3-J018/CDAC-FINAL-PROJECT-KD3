@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\TaskBuddyApi.csproj": {}
+    "C:\\CDAC-FINAL-PROJECT-KD3----\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\TaskBuddyApi.csproj": {}
   },
   "projects": {
-    "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\TaskBuddyApi.csproj": {
+    "C:\\CDAC-FINAL-PROJECT-KD3----\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\TaskBuddyApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\TaskBuddyApi.csproj",
+        "projectUniqueName": "C:\\CDAC-FINAL-PROJECT-KD3----\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\TaskBuddyApi.csproj",
         "projectName": "TaskBuddyApi",
-        "projectPath": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\TaskBuddyApi.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "E:\\prathamesh\\project\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\obj\\",
+        "projectPath": "C:\\CDAC-FINAL-PROJECT-KD3----\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\TaskBuddyApi.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\CDAC-FINAL-PROJECT-KD3----\\CDAC-FINAL-PROJECT-KD3\\Backend\\TaskBuddyApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -122,7 +122,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
